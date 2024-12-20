@@ -1,0 +1,9 @@
+.TextScrollable{
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #000;
+}
+.Scrollable-panel-centred__FAQ:first-child{
+    padding-top: 64px;
+}
+

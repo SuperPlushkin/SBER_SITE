@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/Header.css">
+    <link rel="stylesheet" href="text/TextScrollable.css">
+    <link rel="stylesheet" href="text/TextHeader.css">
+    <link rel="stylesheet" href="styles/Hero.css">
+    <link rel="stylesheet" href="styles/UIButtons.css">
+    <link rel="stylesheet" href="styles/Carousel.css">
+    <link rel="stylesheet" href="Media/Media.css">
+    <link rel="stylesheet" href="styles/Scrollable.css">
+</head>
+<body>
+    <div class="Header">
+        <div class="Header__content">
+            <img class="Header-content__line ls-is-cached lazyloaded" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzY2IiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCAxMzY2IDYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPiA8ZGVmcz4gPGxpbmVhckdyYWRpZW50IGlkPSJwcmVmaXhfX2EiIHgxPSIuNTk2JSIgeDI9IjEwMCUiIHkxPSI1MCUiIHkyPSI1MCUiPiA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBEOTAwIi8+IDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0ZGRkYwMCIvPiA8L2xpbmVhckdyYWRpZW50PiA8L2RlZnM+IDxwYXRoIGZpbGw9InVybCgjcHJlZml4X19hKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMCAwSDEzNjZWNkgweiIvPiA8L3N2Zz4=" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMzY2IiBoZWlnaHQ9IjYiIHZpZXdCb3g9IjAgMCAxMzY2IDYiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPiA8ZGVmcz4gPGxpbmVhckdyYWRpZW50IGlkPSJwcmVmaXhfX2EiIHgxPSIuNTk2JSIgeDI9IjEwMCUiIHkxPSI1MCUiIHkyPSI1MCUiPiA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBEOTAwIi8+IDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI0ZGRkYwMCIvPiA8L2xpbmVhckdyYWRpZW50PiA8L2RlZnM+IDxwYXRoIGZpbGw9InVybCgjcHJlZml4X19hKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMCAwSDEzNjZWNkgweiIvPiA8L3N2Zz4=" decoding="async" alt="Экосистема Сбера" role="presentation" aria-hidden="true">
+            <div class="Header-content__upper">
+                <div class="Header-content-upper__left">
+                    <div class="Header-item__logo"><img class="header__logo-image" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAzIiBoZWlnaHQ9IjE3IiB2aWV3Qm94PSIwIDAgMTAzIDE3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiA8cGF0aCBkPSJNNDYuMDU0NCA0LjkwNzI3TDQ4LjIwMTUgMy4zMDgxSDQxLjAxMzNWMTIuODg3NUg0OC4yMDE1VjExLjI4ODNINDMuMDY3MVY4Ljg0MjQ5SDQ3LjQ1NDdWNy4yNDMzMkg0My4wNjcxVjQuOTA3MjdINDYuMDU0NFoiIGZpbGw9IiMyMUEwMzgiLz4gPHBhdGggZD0iTTM1LjU4MzIgNy4wMzk1SDMzLjA5MzhWNC45MDcyN0gzNy4wNzY5TDM5LjIyNCAzLjMwODFIMzEuMDRWMTIuODg3NUgzNS4zMTg3QzM3LjcxNDggMTIuODg3NSAzOS4wOTk1IDExLjc5IDM5LjA5OTUgOS44NzcyNUMzOS4wOTk1IDguMDQyOSAzNy44NTQ4IDcuMDM5NSAzNS41ODMyIDcuMDM5NVpNMzUuMjQwOSAxMS4yODgzSDMzLjA5MzhWOC42Mzg2OEgzNS4yNDA5QzM2LjU0NzkgOC42Mzg2OCAzNy4xNTQ3IDkuMDc3NjYgMzcuMTU0NyA5Ljk3MTMyQzM3LjE1NDcgMTAuODY1IDM2LjUwMTIgMTEuMjg4MyAzNS4yNDA5IDExLjI4ODNaIiBmaWxsPSIjMjFBMDM4Ii8+IDxwYXRoIGQ9Ik01NC4wMjA1IDMuMzA4MUg1MC4xMTUzVjEyLjg4NzVINTIuMTY5VjEwLjE3NTFINTQuMDM2MUM1Ni41MjU1IDEwLjE3NTEgNTguMDgxNCA4Ljg1ODE3IDU4LjA4MTQgNi43NDE2MkM1OC4wODE0IDQuNjI1MDYgNTYuNTI1NSAzLjMwODEgNTQuMDIwNSAzLjMwODFaTTUzLjk3MzkgOC41NzU5Nkg1Mi4xNTM1VjQuOTA3MjdINTMuOTczOUM1NS4yOTY0IDQuOTA3MjcgNTYuMDEyMSA1LjU2NTc1IDU2LjAxMjEgNi43NDE2MkM1Ni4wMTIxIDcuOTE3NDggNTUuMjk2NCA4LjU3NTk2IDUzLjk3MzkgOC41NzU5NloiIGZpbGw9IiMyMUEwMzgiLz4gPHBhdGggZD0iTTI3LjUyMzcgMTAuODE3OUMyNi45NzkyIDExLjExNTggMjYuMzcyNCAxMS4yNzI2IDI1Ljc1IDExLjI3MjZDMjMuODk4NSAxMS4yNzI2IDIyLjU2MDQgOS45Mzk5NiAyMi41NjA0IDguMTA1NjJDMjIuNTYwNCA2LjI3MTI3IDIzLjg5ODUgNC45Mzg2MyAyNS43NSA0LjkzODYzQzI2LjQxOSA0LjkyMjk1IDI3LjA3MjUgNS4xNDI0NCAyNy42MTcxIDUuNTM0NEwyOS4wOTUyIDQuNDM2OTJMMjkuMDAxOCA0LjM0Mjg1QzI4LjE0NjEgMy41NzQ2MiAyNi45OTQ3IDMuMTgyNjcgMjUuNjg3OCAzLjE4MjY3QzI0LjI3MTkgMy4xODI2NyAyMi45ODA1IDMuNjY4NjkgMjIuMDQ3IDQuNTQ2NjdDMjEuMTEzNCA1LjQ1NjAxIDIwLjU4NDQgNi43MjU5NCAyMC42MTU2IDguMDQyOUMyMC42IDkuMzc1NTUgMjEuMTEzNCAxMC42NjEyIDIyLjA0NyAxMS42MDE4QzIzLjAyNzIgMTIuNTI2OSAyNC4zMzQxIDEzLjA0NDIgMjUuNjcyMiAxMy4wMTI5QzI3LjE1MDMgMTMuMDEyOSAyOC40NDE3IDEyLjQ5NTUgMjkuMzEzIDExLjU1NDhMMjcuOTkwNSAxMC41NjcxTDI3LjUyMzcgMTAuODE3OVoiIGZpbGw9IiMyMUEwMzgiLz4gPHBhdGggZD0iTTgyLjc3MzQgMy4zMjM3OFYxMi45MDMxSDg0LjgyNzJWOC45ODM1OUg4OS4xOTkyVjEyLjkwMzFIOTEuMjUzVjMuMzIzNzhIODkuMTk5MlY3LjI1OUg4NC44MjcyVjMuMzIzNzhIODIuNzczNFpNNzkuMjQxNSAxMi45MDMxSDgxLjQwNDJMNzcuMzkgMy4zMjM3OEg3NS4zMDUxTDcxLjIxMzEgMTIuOTAzMUg3My4yODI1TDc0LjEwNzEgMTAuOTc0N0g3OC40NjM2TDc5LjI0MTUgMTIuOTAzMVpNNzQuNzI5NSA5LjM3NTU1TDc2LjMxNjUgNS41MzQ0TDc3LjgxMDEgOS4zNzU1NUg3NC43Mjk1Wk05NS44NTg1IDkuMDMwNjNIOTcuMTM0M0wxMDAuMjc3IDEyLjg4NzVIMTAyLjkyMkw5OC43MjEzIDcuOTMzMTZMMTAyLjM5MyAzLjMwODFIMTAwLjA0NEw5Ni45OTQzIDcuNDE1NzhIOTUuODU4NVYzLjMwODFIOTMuODA0N1YxMi44ODc1SDk1Ljg1ODVWOS4wMzA2M1pNNjQuNDI5NSA3LjA1NTE4VjQuOTIyOTVINjkuNzk3M1YzLjMyMzc4SDYyLjM3NTdWMTIuOTAzMUg2Ni42NTQ0QzY5LjA1MDUgMTIuOTAzMSA3MC40MzUyIDExLjgwNTcgNzAuNDM1MiA5Ljg5MjkzQzcwLjQzNTIgOC4wNTg1OCA2OS4xOTA1IDcuMDU1MTggNjYuOTE4OSA3LjA1NTE4SDY0LjQyOTVaTTY0LjQyOTUgMTEuMzA0VjguNjU0MzVINjYuNTc2NkM2Ny44ODM1IDguNjU0MzUgNjguNDkwMyA5LjA5MzM0IDY4LjQ5MDMgOS45ODdDNjguNDkwMyAxMC44ODA3IDY3Ljg1MjQgMTEuMzE5NiA2Ni41NzY2IDExLjMxOTZINjQuNDI5NVYxMS4zMDRaIiBmaWxsPSIjMjFBMDM4Ii8+IDxwYXRoIGQ9Ik0xNC4xODk3IDMuMjQ1MzhDMTQuNTYzMSAzLjczMTQxIDE0Ljg3NDMgNC4yNjQ0NyAxNS4xMzg4IDQuODI4ODhMNy45NTA2IDEwLjE3NTFMNC45MzIxNyA4LjI2MjRWNS45NzMzOUw3LjkzNTA0IDcuODcwNDRMMTQuMTg5NyAzLjI0NTM4WiIgZmlsbD0iIzIxQTAzOCIvPiA8cGF0aCBkPSJNMS44NjcwNyA4LjEwNTYyQzEuODY3MDcgNy45OTU4NyAxLjg2NzA3IDcuOTAxOCAxLjg4MjYzIDcuNzkyMDVMMC4wNjIyMzU1IDcuNjk3OThDMC4wNjIyMzU1IDcuODIzNDEgMC4wNDY2NzY2IDcuOTY0NTEgMC4wNDY2NzY2IDguMDg5OTRDMC4wNDY2NzY2IDEwLjI4NDkgMC45MzM1MzUgMTIuMjc2IDIuMzY0OTUgMTMuNzE4NEwzLjY1NjM0IDEyLjQxNzFDMi41NTE2NiAxMS4zMTk2IDEuODY3MDcgOS43OTg4NiAxLjg2NzA3IDguMTA1NjJaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfNDU0Xzg4ODcpIi8+IDxwYXRoIGQ9Ik03LjkzNTA1IDEuOTkxMTNDOC4wNDM5NiAxLjk5MTEzIDguMTM3MzIgMS45OTExMyA4LjI0NjIzIDIuMDA2ODFMOC4zMzk1OCAwLjE3MjQ2MkM4LjIxNTExIDAuMTcyNDYyIDguMDc1MDggMC4xNTY3ODQgNy45NTA2MSAwLjE1Njc4NEM1Ljc3MjM2IDAuMTU2Nzg0IDMuNzk2MzggMS4wNTA0NCAyLjM2NDk2IDIuNDkyODNMMy42NTYzNSAzLjc5NDEyQzQuNzQ1NDcgMi42ODA5NyA2LjI3MDI1IDEuOTkxMTMgNy45MzUwNSAxLjk5MTEzWiIgZmlsbD0idXJsKCNwYWludDFfbGluZWFyXzQ1NF84ODg3KSIvPiA8cGF0aCBkPSJNNy45MzUwNSAxNC4yMjAxQzcuODI2MTQgMTQuMjIwMSA3LjczMjc4IDE0LjIyMDEgNy42MjM4NyAxNC4yMDQ0TDcuNTMwNTIgMTYuMDM4OEM3LjY1NDk5IDE2LjAzODggNy43OTUwMiAxNi4wNTQ0IDcuOTE5NDkgMTYuMDU0NEMxMC4wOTc3IDE2LjA1NDQgMTIuMDczNyAxNS4xNjA4IDEzLjUwNTEgMTMuNzE4NEwxMi4yMTM3IDEyLjQxNzFDMTEuMTI0NiAxMy41NDU5IDkuNjE1NDEgMTQuMjIwMSA3LjkzNTA1IDE0LjIyMDFaIiBmaWxsPSJ1cmwoI3BhaW50Ml9saW5lYXJfNDU0Xzg4ODcpIi8+IDxwYXRoIGQ9Ik0xMS4zNTggMy4wNTcyNUwxMi44OTgzIDEuOTEyNzRDMTEuNTQ0NyAwLjgxNTI2NyA5LjgxNzY3IDAuMTQxMTA2IDcuOTM1MDQgMC4xNDExMDZWMS45NzU0NUM5LjIxMDg3IDEuOTkxMTMgMTAuMzkzNCAyLjM4MzA4IDExLjM1OCAzLjA1NzI1WiIgZmlsbD0idXJsKCNwYWludDNfbGluZWFyXzQ1NF84ODg3KSIvPiA8cGF0aCBkPSJNMTUuODM5IDguMTA1NjFDMTUuODM5IDcuNjE5NTkgMTUuNzkyMyA3LjE0OTI1IDE1LjcxNDUgNi42Nzg5TDE0LjAxODYgNy45NDg4M0MxNC4wMTg2IDcuOTk1ODcgMTQuMDE4NiA4LjA1ODU4IDE0LjAxODYgOC4xMDU2MUMxNC4wMTg2IDkuOTA4NiAxMy4yNDA2IDExLjUyMzUgMTIuMDExNSAxMi42MzY2TDEzLjI0MDYgMTQuMDAwNkMxNC44Mjc2IDEyLjU1ODIgMTUuODM5IDEwLjQ0MTcgMTUuODM5IDguMTA1NjFaIiBmaWxsPSIjMjFBMDM4Ii8+IDxwYXRoIGQ9Ik03LjkzNTA1IDE0LjIyMDFDNi4xNDU3OCAxNC4yMjAxIDQuNTQzMjEgMTMuNDM2MiAzLjQzODUzIDEyLjE5NzZMMi4wODQ5IDEzLjQzNjJDMy41MzE4OCAxNS4wNTEgNS42MTY3NyAxNi4wNTQ0IDcuOTM1MDUgMTYuMDU0NFYxNC4yMjAxWiIgZmlsbD0idXJsKCNwYWludDRfbGluZWFyXzQ1NF84ODg3KSIvPiA8cGF0aCBkPSJNMy44NzQxNyAzLjU3NDYzTDIuNjQ1MDIgMi4yMTA2MkMxLjA0MjQ1IDMuNjY4NjkgMC4wNDY2NzY2IDUuNzY5NTcgMC4wNDY2NzY2IDguMTA1NjJIMS44NjcwN0MxLjg2NzA3IDYuMzE4MyAyLjY0NTAyIDQuNjg3NzggMy44NzQxNyAzLjU3NDYzWiIgZmlsbD0idXJsKCNwYWludDVfbGluZWFyXzQ1NF84ODg3KSIvPiA8ZGVmcz4gPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzQ1NF84ODg3IiB4MT0iMi4xNzA3IiB5MT0iMTMuNDk1MiIgeDI9IjAuMzExOTg5IiB5Mj0iOC4wODEyOSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPiA8c3RvcCBvZmZzZXQ9IjAuMTQ0NCIgc3RvcC1jb2xvcj0iI0YyRTkxMyIvPiA8c3RvcCBvZmZzZXQ9IjAuMzAzNyIgc3RvcC1jb2xvcj0iI0U3RTUxOCIvPiA8c3RvcCBvZmZzZXQ9IjAuNTgyMyIgc3RvcC1jb2xvcj0iI0NBREIyNiIvPiA8c3RvcCBvZmZzZXQ9IjAuODkxIiBzdG9wLWNvbG9yPSIjQTNDRDM5Ii8+IDwvbGluZWFyR3JhZGllbnQ+IDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQxX2xpbmVhcl80NTRfODg4NyIgeDE9IjIuODgzODYiIHkxPSIyLjI4NTg0IiB4Mj0iNy42MDI2MiIgeTI9IjAuNDczODIzIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+IDxzdG9wIG9mZnNldD0iMC4wNTkyIiBzdG9wLWNvbG9yPSIjMEZBOEUwIi8+IDxzdG9wIG9mZnNldD0iMC41Mzg1IiBzdG9wLWNvbG9yPSIjMDA5OUY5Ii8+IDxzdG9wIG9mZnNldD0iMC45MjM0IiBzdG9wLWNvbG9yPSIjMDI5MUVCIi8+IDwvbGluZWFyR3JhZGllbnQ+IDxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhcl80NTRfODg4NyIgeDE9IjcuNDIzNjMiIHkxPSIxNC40OTQ0IiB4Mj0iMTMuMDQ5MSIgeTI9IjEzLjIxMzMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4gPHN0b3Agb2Zmc2V0PSIwLjEyMjYiIHN0b3AtY29sb3I9IiNBM0NEMzkiLz4gPHN0b3Agb2Zmc2V0PSIwLjI4NDYiIHN0b3AtY29sb3I9IiM4NkMzMzkiLz4gPHN0b3Agb2Zmc2V0PSIwLjg2OTMiIHN0b3AtY29sb3I9IiMyMUEwMzgiLz4gPC9saW5lYXJHcmFkaWVudD4gPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDNfbGluZWFyXzQ1NF84ODg3IiB4MT0iNy41NjEwMiIgeTE9IjEuMzA5NDUiIHgyPSIxMi4yMzgyIiB5Mj0iMi43NjM2NCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPiA8c3RvcCBvZmZzZXQ9IjAuMDU2NiIgc3RvcC1jb2xvcj0iIzAyOTFFQiIvPiA8c3RvcCBvZmZzZXQ9IjAuNzkiIHN0b3AtY29sb3I9IiMwQzhBQ0IiLz4gPC9saW5lYXJHcmFkaWVudD4gPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDRfbGluZWFyXzQ1NF84ODg3IiB4MT0iMi41NDc3NiIgeTE9IjEzLjcyNjgiIHgyPSI3LjU3MTU3IiB5Mj0iMTUuNjE4MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPiA8c3RvcCBvZmZzZXQ9IjAuMTMyNCIgc3RvcC1jb2xvcj0iI0YyRTkxMyIvPiA8c3RvcCBvZmZzZXQ9IjAuMjk3NyIgc3RvcC1jb2xvcj0iI0VCRTcxNiIvPiA8c3RvcCBvZmZzZXQ9IjAuNTMwNiIgc3RvcC1jb2xvcj0iI0Q5RTAxRiIvPiA8c3RvcCBvZmZzZXQ9IjAuODAyMyIgc3RvcC1jb2xvcj0iI0JCRDYyRCIvPiA8c3RvcCBvZmZzZXQ9IjAuOTgyOSIgc3RvcC1jb2xvcj0iI0EzQ0QzOSIvPiA8L2xpbmVhckdyYWRpZW50PiA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50NV9saW5lYXJfNDU0Xzg4ODciIHgxPSIxLjQ0MTUiIHkxPSI4LjMyNzE4IiB4Mj0iMy40NTA5NCIgeTI9IjMuMDU5ODMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4gPHN0b3Agb2Zmc2V0PSIwLjA2OTgiIHN0b3AtY29sb3I9IiNBM0NEMzkiLz4gPHN0b3Agb2Zmc2V0PSIwLjI1OTkiIHN0b3AtY29sb3I9IiM4MUM1NUYiLz4gPHN0b3Agb2Zmc2V0PSIwLjkyMTYiIHN0b3AtY29sb3I9IiMwRkE4RTAiLz4gPC9saW5lYXJHcmFkaWVudD4gPC9kZWZzPiA8L3N2Zz4="></div>
+                    <div class="Text_Header empty">Частным клиентам</div>
+                    <div class="Text_Header Text_Header_after_bottom empty3">Частным клиентам</div>
+                    <div class="Text_Header empty">Самозанятым</div> 
+                    <div class="Text_Header empty">Малому бизнесу и ИП</div>  
+                    <div class="Text_Header Text_Header_after_bottom empty">Ещё</div>
+                </div>
+                <div class="Header-content-upper__right">
+                    <div class="Text_Header empty2">Курсы валют</div>
+                    <div class="Text_Header empty3">Офисы</div>
+                    <div class="Text_Header empty3">Банкоматы</div>  
+                    <div class="Text_Header Text_Header_before empty2">Приморский край</div>
+                    <div class="Text_Header empty2">ENG</div>
+                    <div class="Text_Header Text_Header_green hover-green">Сбербанк Онлайн</div>
+                    <div class="empty2">
+                        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search img-hover-grey">
+                            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"></path>
+                        </svg>
+                    </div>
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                        <div class="hamburger__line"></div>
+                        <div class="hamburger__line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Header__content">
+            <div class="Header-content__bottom">
+                <div class="Header-content-bottom__item">
+                    <div class="Text-Header-bottom Text_Header_after_right">SberPay</div>
+                    <div class="Text-Header-bottom Text_Header_after_right">СберПрайм</div>
+                    <div class="Text-Header-bottom">Кредиты</div>
+                    <div class="Text-Header-bottom">Ипотека</div>
+                    <div class="Text-Header-bottom">Карты</div>
+                    <div class="Text-Header-bottom">Вклады</div>
+                    <div class="Text-Header-bottom Text_Header_after_right">Премиум</div>
+                    <div class="Text-Header-bottom">Инвестиции</div>
+                    <div class="Text-Header-bottom">Платежи</div>
+                    <div class="Text-Header-bottom">Переводы</div>
+                    <div class="Text-Header-bottom">Страхования</div>
+                    <div class="Text-Header-bottom">Поддержка</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Hero">
+        <div class="Hero__content">
+            <video class="Hero-content__background" playsinline autoplay muted loop poster="https://sber.cdnvideo.ru/common/files/main_page/main_page_mobile/img/181124_test_7.jpg">
+                <source src="https://sber.cdnvideo.ru/common/files/main_page/main_page_mobile/img/181124_test_7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="Hero-content__text-box">
+                <div class="Hero-content-text-box__header-text">Розыгрыш призов <br/> от Вселенной выгоды</div>
+                <div class="Hero-content-text-box__header-text show">Вселенная выгоды</div>
+                <div class="Hero-content-text-box__main-text">Покупка по карте Сбера — это шанс выиграть квартиру <br class="space"/> в Москве, машину, 300 000 бонусов и другие классные <br class="space"/> призы. Регистрируйтесь в акции и выигрывайте!</div>
+                <div class="Hero-content-text-box__button">Зарегестрироваться</div>
+            </div>
+        </div>
+        <div class="Hero__content-down">
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Розыгрыш <br/> до 1 млн ₽</div>
+                <img class="UIButtons__Small" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/pogasheniye_zaglushka101224.webp" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Улыбайтесь -<br/> это выгодно!</div>
+                <img class="UIButtons__Small" src="https://sber.cdnvideo.ru/common/img/uploaded/_new_site/person/main_page_pilot/img/privileges_landing_preview021224.jpeg" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Вклад <br/> лучший %</div>
+                <img class="UIButtons__Small" src="https://sber.cdnvideo.ru/common/img/uploaded/_new_site/person/main_page_pilot/img/story-best-21-bg.jpeg" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Адвент- <br/> календарь</div>
+                <img class="UIButtons__Small" src="https://www.sberbank.com/common/files/main_page/main_page_desktop/images/idol_card.jpeg" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Инвестиции <br/> с кешбеком</div>
+                <img class="UIButtons__Small" src="https://www.sberbank.com/common/img/uploaded/redirected/person/investments/images/main_story/bpif_preview.jpeg" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Молодёжная кредитка</div>
+                <img class="UIButtons__Small" src="http://www.sberbank.ru/common/img/uploaded/_new_site/person/main_page_pilot/img/story-fkr-preview.jpeg" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Монета <br/> Змея Al</div>
+                <img class="UIButtons__Small" src="http://www.sberbank.ru/common/img/uploaded/_new_site/person/main_page_pilot/img/stories_mini_snake_coin.webp" alt=""/>
+            </div>
+            <div class="UIButtons__Small">
+                <div class="UIButton__Small-text">Заезжайте <br/> за выгодой</div>
+                <img class="UIButtons__Small" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/story-car-2110.webp" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="Scrollable-panel">
+        <div class="Scrollable-panel__centred">
+            <div class="Scrollable-panel-centred__FAQ">
+                <div class="TextScrollable">Что часто ищут</div>
+                <div class="Carousel">
+                    <div class="Carousel__element">Для всех</div>
+                    <div class="Carousel__element">Для молодёжи</div>
+                    <div class="Carousel__element">Для семьи</div>
+                    <div class="Carousel__element">Пенсионерам</div>
+                    <div class="Carousel__element">Премиум</div>
+                </div>
+                <div class="Mass-of-UIButtons">
+                    <div class="UIButtons__Big UIButtons-size-on-hover" style="margin-left: 35px;">
+                        <div class="UIButtons-Big__text">Как получать <br/> больше бонусов</div>
+                        <img loading="lazy" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/segment_all.webp" alt="">
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Medium UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Кредит наличными</div>
+                        <div class="UIButtons-Big__text-small">До 30 млн уже сегодня</div>
+                        <div class="image-UIButtons-Medium">
+                            <img loading="lazy" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/credit_desk.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Medium UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Подписка Сберпрайм</div>
+                        <div class="UIButtons-Big__text-small">Кешбек бонусами, фильмы и музыка</div>
+                        <div class="image-UIButtons-Medium">
+                            <img loading="lazy" class="mpd-popular-offers__offer__image" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/prime_desk.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Medium UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Кредитная <br/> Сберкарта</div>
+                        <div class="UIButtons-Big__text-small">Кешбек бонусами и 120 дней без %</div>
+                        <div class="image-UIButtons-Medium">
+                            <img loading="lazy" class="mpd-popular-offers__offer__image" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/creditcard_desk.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Long UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Карты от группы "Кино"</div>
+                        <div class="UIButtons-Big__text-small">Выберите свой дизайн из новой лимитированной коллекции</div>
+                        <div class="image-UIButtons-Medium" style="left: 240px;"> 
+                            <img loading="lazy" class="mpd-popular-offers__offer__image" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/sberkarta_young_desk_newmain211124.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Long UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Ставки по вкладу до 21%</div>
+                        <div class="UIButtons-Big__text-small">Откройте "Лучший %" <br/> на максимальных выгодных <br/> условиях</div>
+                        <div class="image-UIButtons-Medium" style="left: 240px;"> 
+                            <img loading="lazy" class="mpd-popular-offers__offer__image" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/vklad_desk.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="UIButtons__Long UIButtons-size-on-hover">
+                        <div class="UIButtons-Big__text" style="margin-bottom: 5px;">Платите улыбкой <br/> со SberPay</div>
+                        <div class="UIButtons-Big__text-small">Посмотреть в камеру - <br/> и готово</div>
+                        <div class="image-UIButtons-Medium" style="left: 240px;"> 
+                            <img loading="lazy" class="mpd-popular-offers__offer__image" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/smile_desk.webp" alt="">
+                        </div>
+                        <div class="arrow-right">
+                            <svg fill="current" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="arrowRight_svg__a"><path fill-opacity="0" d="M0 0h36v36H0z"></path></clipPath></defs><g clip-path="url(#arrowRight_svg__a)"><path d="M27.13 19.27c.22-.19.37-.46.37-.77 0-.32-.15-.59-.37-.78-.02-.02-.04-.05-.07-.07l-4.86-4.86a.996.996 0 1 0-1.41 1.41l3.29 3.3H9.5c-.56 0-1 .44-1 1 0 .55.44 1 1 1h14.58l-3.29 3.29a.996.996 0 1 0 1.41 1.41l4.86-4.86c.03-.02.05-.05.07-.07Z" fill-rule="evenodd"></path></g></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="Scrollable-panel__Long-Big">
+                    <div class="Scrollable-panel__Long-Big-all-text">
+                        <div class="Scrollable-panel__Long-Big-header-text">Установите СберБанк Онлайн на телефон</div>
+                        <div class="Scrollable-panel__Long-Big-main-text">Загрузите приложение в офисе банка или скачайте его самостоятелно</div>
+                        <div class="Scrollable-panel__Long-Big-button">Установить на Android</div>
+                        <div class="Scrollable-panel__Long-Big-button">Установить на IOS</div>
+                    </div>
+                    <img loading="lazy" class="img-cards" src="https://sber.cdnvideo.ru/common/files/main_page/main_page_desktop/images/mobile_app.webp" alt="">
+                </div>
+            </div>
+            <div class="Scrollable-panel-centred__you-may-like-it">
+                <h2>Вам может понравиться</h2>
+                <div class="UIButtons__you-may-like-it">
+                    <div class="UIButtons-you-may-like-it__all-text">
+                        <div class="UIButtons-you-may-like-it__header-text">Вклады</div>
+                        <div class="UIButtons-you-may-like-it__main-text">Вклад Управляй+</div>
+                        <div class="UIButtons-you-may-like-it__green-text">Оформить</div>
+                        <img src="https://www.sberbank.ru/static/images/prod_card/2023_07/1690377900000_242_desktopImg.png?_=1690378063061" alt="Изображение вклада Вклад Управляй+" role="presentation">
+                    </div>
+                </div>
+                <div class="UIButtons__you-may-like-it">
+                    <div class="UIButtons-you-may-like-it__all-text">
+                        <div class="UIButtons-you-may-like-it__header-text">Дебетовые карты</div>
+                        <div class="UIButtons-you-may-like-it__main-text">Детская Сберкарта</div>
+                        <div class="UIButtons-you-may-like-it__green-text">Оформить карту</div>
+                        <img src="https://www.sberbank.ru/static/images/prod_card/2023_07/1690367820000_142_desktopImg.png?_=1690367914419" alt="Изображение СберВклада" role="presentation">
+                    </div>
+                </div>
+                <div class="UIButtons__you-may-like-it" style="margin-right: 0;">
+                    <div class="UIButtons-you-may-like-it__all-text">
+                        <div class="UIButtons-you-may-like-it__header-text">Вклады</div>
+                        <div class="UIButtons-you-may-like-it__main-text">СберВклад</div>
+                        <div class="UIButtons-you-may-like-it__green-text">Оформить</div>
+                        <img src="https://www.sberbank.ru/static/images/prod_card/2023_07/1690368840000_202_desktopImg.png?_=1690368966356" alt="Изображение СберВклада" role="presentation">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer-content__main">
+                    <div class="footer-content-main__upper-block">
+                        <div class="hover-grey">Мобильное приложение</div>
+                        <div class="hover-grey">Веб-версия СберБанк Онлайн</div>
+                        <div class="hover-grey">Малому бизнесу и ИП</div>
+                        <div class="hover-grey">СберПресс</div>
+                        <div class="hover-grey">СберТВ</div>
+                        <div class="hover-grey">Ваша безопасность</div>
+                        <div class="hover-grey">О банке</div>
+                        <div class="hover-grey">Связаться с банком</div>
+                        <div class="hover-grey">Вакансии</div>
+                        <div class="hover-grey">Вопросы и ответы</div>
+                        <div class="hover-grey">Клиентам с инвалидностью</div>
+                        <div class="hover-grey">Офисы и банкоматы</div>
+                        <div class="hover-grey">Курсы валют</div>
+                        <div class="hover-grey">Политика обработки данных</div>
+                    </div>
+                    <div class="footer-content-main__middle-block">
+                        <div>Россия, Москва, 117997, ул. Вавилова, 19</div>
+                        <div>© 1997—2024 ПАО Сбербанк.</div>
+                    </div>
+                    <div class="footer-content-main__bottom-block">
+                        <div class="hover-grey">Генеральная лицензия Банка России на осуществление банковских операций №1481 от 11.08.2015 г.</div>
+                        <div class="hover-grey">Информация о процентных ставках по договорам банковского вклада с физическими лицами</div>
+                        <div class="hover-grey">Информация, обязательная к размещению</div>
+                        <div class="hover-grey">Раскрытие информации о банке как о профессиональном участнике рынка ценных бумаг</div>
+                        <div class="hover-grey">На информационном ресурсе применяются рекомендательные технологии</div>
+                    </div>
+                </div>
+                <div class="footer-content__phones">
+                    <div class="per-cent-100-width">
+                        <div class="text-footer-phones">
+                            <div class="text-footer-phones__header-text" style="color: #08a652;">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4gPGRlZnM+IDxsaW5lYXJHcmFkaWVudCBpZD0icHJlZml4X19hIiB4MT0iNTguMTY4JSIgeDI9IjUuMjA3JSIgeTE9IjAlIiB5Mj0iNzEuNDA1JSI+IDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMTg3QzgiLz4gPHN0b3Agb2Zmc2V0PSIzMS4zMzIlIiBzdG9wLWNvbG9yPSIjMDhBNjUyIi8+IDxzdG9wIG9mZnNldD0iNzIuMzg0JSIgc3RvcC1jb2xvcj0iIzA4QTY1MiIvPiA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGQUVGMjMiLz4gPC9saW5lYXJHcmFkaWVudD4gPC9kZWZzPiA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiA8cGF0aCBmaWxsPSJ1cmwoI3ByZWZpeF9fYSkiIGQ9Ik0xMCAwYzIuNDAzIDAgNC42MDguODQ3IDYuMzMyIDIuMjZMMTQuNjEgMy42MzdjLTEuMjk1LS45NC0yLjg4OC0xLjQ5NC00LjYxMS0xLjQ5NC00LjM0IDAtNy44NTcgMy41MTgtNy44NTcgNy44NTcgMCA0LjM0IDMuNTE4IDcuODU3IDcuODU3IDcuODU3IDQuMzQgMCA3Ljg1Ny0zLjUxOCA3Ljg1Ny03Ljg1NyAwLS4xLS4wMDItLjItLjAwNS0uM2wxLjk5Ny0xLjQ0MmMuMS41NjYuMTUxIDEuMTQ4LjE1MSAxLjc0MiAwIDUuNTIzLTQuNDc3IDEwLTEwIDEwUzAgMTUuNTIzIDAgMTAgNC40NzcgMCAxMCAweiIvPiA8cGF0aCBmaWxsPSIjMjI5RTM5IiBkPSJNNi4yMzggNy41NjNMMTAgMTAgMTguMTE4IDQuMDUgMTkuMzI0IDYuMDA5IDEwIDEyLjgyMyA2LjIzOCAxMC40NzV6Ii8+IDwvZz4gPC9zdmc+" alt="">
+                                Звонок из приложения СберБанк Онлайн
+                                
+                            </div>
+                            <div class="text-footer-phones__main-text">через интернет, бесплатно по Wi-Fi</div>
+                        </div>
+                        <div class="text-footer-phones">
+                            <div class="text-footer-phones__header-text">900</div>
+                            <div class="text-footer-phones__main-text">Бесплатно по России при звонке в сети операторов МТС, Билайн, МегаФон, t2, Yota, Мотив</div>
+                        </div>
+                        <div class="text-footer-phones">
+                            <div class="text-footer-phones__header-text">Звонок из-за границы</div>
+                            <div class="text-footer-phones__main-text">Стоимость звонка зависит от тарифа вашего мобильного оператора</div>
+                        </div>
+                        <div class="Mass-of-UIButtons-footer">
+                            <div class="UIButtons-footer-small">
+                                <img style="width: 90px; height: 50px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5NSIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCA5NSA1MCI+CiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnPgogICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgIDxnPgogICAgICAgICAgICAgICAgICAgIDxnIGZpbGw9IiNDODEwMkUiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik04LjU5LjE1NmgxMi45ODJjNC42MTMgMCA4LjM1MyAzLjc0IDguMzUzIDguMzUzdjEyLjk4MmMwIDQuNjEzLTMuNzQgOC4zNTMtOC4zNTMgOC4zNTNIOC41OWMtNC42MTQgMC04LjM1My0zLjc0LTguMzUzLTguMzUzVjguNTA5Qy4yMzcgMy44OTYgMy45NzguMTU2IDguNTkuMTU2eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTg4OCAtMzE0KSB0cmFuc2xhdGUoODg4IDMxNCkgdHJhbnNsYXRlKDMzIDEzKSIvPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8Zz4KICAgICAgICAgICAgICAgICAgICAgICAgPGc+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMi43NTMgMTAuMTU2TDMuNTQxIDEwLjE1NiAzLjU0MSAxNC4wMzcgMi43NTMgMTQuMDM3IDIuNzUzIDEyLjQ1OS45NzUgMTIuNDU5Ljk3NSAxNC4wMzcuMTg4IDE0LjAzNy4xODggMTAuMTU2Ljk3NSAxMC4xNTYuOTc1IDExLjcxOSAyLjc1MyAxMS43MTl6TTcuMTkgMTIuMzc4YzAgLjYyNS0uMzEyLjk2OS0uODguOTY5LS41NyAwLS44ODgtLjM0Ny0uODg4LS45OTd2LTIuMTg4aC0uNzg4djIuMjJjMCAxLjA5LjYwNyAxLjcxNSAxLjY2MyAxLjcxNXMxLjY4MS0uNjI1IDEuNjgxLTEuNzV2LTIuMTg4aC0uNzg3djIuMjJ6TTE2LjI5MSAxMi44MjVMMTUuNDA5IDEwLjE1NiAxNC43ODQgMTAuMTU2IDEzLjkwMyAxMi44MjUgMTMuMDI4IDEwLjE1NiAxMi4xOTEgMTAuMTU2IDEzLjU0NCAxNC4wMzcgMTQuMTk3IDE0LjAzNyAxNS4wNzggMTEuNDg4IDE1Ljk1OSAxNC4wMzcgMTYuNjE5IDE0LjAzNyAxNy45NjkgMTAuMTU2IDE3LjE1IDEwLjE1NnpNMTkuMzc4IDEyLjM2NkwyMC44MTMgMTIuMzY2IDIwLjgxMyAxMS42NTkgMTkuMzc4IDExLjY1OSAxOS4zNzggMTAuODY2IDIxLjQ1OSAxMC44NjYgMjEuNDU5IDEwLjE1NiAxOC42MDMgMTAuMTU2IDE4LjYwMyAxNC4wMzEgMjEuNTM0IDE0LjAzMSAyMS41MzQgMTMuMzI1IDE5LjM3OCAxMy4zMjV6TTIyLjQ3MiAxNC4wMzFMMjMuMjUgMTQuMDMxIDIzLjI1IDEwLjE1NiAyMi40NzIgMTAuMTU2ek05LjUzNCAxMy4yMjhMOS4xODEgMTQuMDM0IDguMzc4IDE0LjAzNCAxMC4wNzUgMTAuMTU2IDEwLjc2OSAxMC4xNTYgMTIuNDcyIDE0LjAzNCAxMS42NDcgMTQuMDM0IDExLjMyNSAxMy4yMzF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtODg4IC0zMTQpIHRyYW5zbGF0ZSg4ODggMzE0KSB0cmFuc2xhdGUoMzMgMTMpIHRyYW5zbGF0ZSgzLjM2MiA0Ljg0NCkiLz4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTExLjcxOSA1LjIxNkM4Ljk5IDUuMjE0IDYuNzc5IDMuMDAzIDYuNzc5LjI3NWguNjk2YzAgMi4zNDQgMS45IDQuMjQ0IDQuMjQ0IDQuMjQ0czQuMjQ0LTEuOSA0LjI0NC00LjI0NGguNjk2Yy0uMDAxIDIuNzI4LTIuMjEyIDQuOTM5LTQuOTQgNC45NHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04ODggLTMxNCkgdHJhbnNsYXRlKDg4OCAzMTQpIHRyYW5zbGF0ZSgzMyAxMykgdHJhbnNsYXRlKDMuMzYyIDQuODQ0KSIvPgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIuNzUzIDEwLjE1NmguNzg4djMuODgxaC0uNzg4VjEyLjQ2SC45NzV2MS41NzlILjE4OHYtMy44ODJoLjc4N3YxLjU2M2gxLjc3OHYtMS41NjN6bTQuNDM4IDIuMjIyYzAgLjYyNS0uMzEzLjk2OS0uODgyLjk2OS0uNTY4IDAtLjg4Ny0uMzQ3LS44ODctLjk5N3YtMi4xODhoLS43ODh2Mi4yMmMwIDEuMDkuNjA3IDEuNzE1IDEuNjYzIDEuNzE1czEuNjgxLS42MjUgMS42ODEtMS43NXYtMi4xODhoLS43ODd2Mi4yMnptOS4xLjQ0N2wtLjg4Mi0yLjY2OWgtLjYyNWwtLjg4IDIuNjY5LS44NzYtMi42NjloLS44MzdsMS4zNTMgMy44ODFoLjY1M2wuODgxLTIuNTUuODgxIDIuNTVoLjY2bDEuMzUtMy44OGgtLjgxOWwtLjg2IDIuNjY4em0zLjA4Ny0uNDZoMS40MzR2LS43MDZoLTEuNDM0di0uNzkzaDIuMDgxdi0uNzFoLTIuODU2djMuODc1aDIuOTMxdi0uNzA2aC0yLjE1NnYtLjk2em0zLjA5NCAxLjY2NmguNzc4di0zLjg3NWgtLjc3OHYzLjg3NXptLTEyLjkzOC0uODAzbC0uMzUzLjgwNmgtLjgwM2wxLjY5Ny0zLjg3OGguNjk0bDEuNzAzIDMuODc4aC0uODI1bC0uMzIyLS44MDMtMS43OS0uMDAzem0uMjk0LS43aDEuMTg0bC0uNi0xLjM5LS41ODQgMS4zOXoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04ODggLTMxNCkgdHJhbnNsYXRlKDg4OCAzMTQpIHRyYW5zbGF0ZSgzMyAxMykgdHJhbnNsYXRlKDMuMzYyIDQuODQ0KSIvPgogICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="">
+                                <div class="UIButtons-footer-small__main-text">Откройте в</div>
+                                <div class="UIButtons-footer-small__header-text">AppGallery</div>
+                            </div>
+                            <div class="UIButtons-footer-small">
+                                <div class="centred-img">
+                                    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMzVweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMzUgMjAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+VmVjdG9yPC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTIiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJHb29nbGUtUGxheS1Db3B5LTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOC4wMDAwMDAsIC0yMS4wMDAwMDApIiBmaWxsPSIjM0REQzg0IiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8ZyBpZD0iVmVjdG9yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOC4wMDAwMDAsIDIxLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTI1LjU2ODEzMTQsMTQuOTQ2NzY5NSBDMjQuNzYwNTU2MiwxNC45NDY3Njk1IDI0LjEwNTM1MzcsMTQuMjgyMjgxNSAyNC4xMDUzNTM3LDEzLjQ2MzI2MTQgQzI0LjEwNTM1MzcsMTIuNjQ0MjQxMyAyNC43NjA1NTYyLDExLjk3OTc1MzMgMjUuNTY4MTMxNCwxMS45Nzk3NTMzIEMyNi4zNzU3MDY1LDExLjk3OTc1MzMgMjcuMDMwOTA5LDEyLjY0NDI0MTMgMjcuMDMwOTA5LDEzLjQ2MzI2MTQgQzI3LjAzMDkwOSwxNC4yODIyODE1IDI2LjM3NTcwNjUsMTQuOTQ2NzY5NSAyNS41NjgxMzE0LDE0Ljk0Njc2OTUgWiBNOS40NjIzMzk1MiwxNC45NDY3Njk1IEM4LjY1NDc2NDMzLDE0Ljk0Njc2OTUgNy45OTk1NjE4MywxNC4yODIyODE1IDcuOTk5NTYxODMsMTMuNDYzMjYxNCBDNy45OTk1NjE4MywxMi42NDQyNDEzIDguNjU0NzY0MzMsMTEuOTc5NzUzMyA5LjQ2MjMzOTUyLDExLjk3OTc1MzMgQzEwLjI2OTkxNDcsMTEuOTc5NzUzMyAxMC45MjUxMTcyLDEyLjY0NDI0MTMgMTAuOTI1MTE3MiwxMy40NjMyNjE0IEMxMC45MjUxMTcyLDE0LjI4MjI4MTUgMTAuMjY5OTE0NywxNC45NDY3Njk1IDkuNDYyMzM5NTIsMTQuOTQ2NzY5NSBaIE0yNi4wODYxOTg1LDYuMDQ1NzIwNzUgTDI5LjAxMTc1MzgsMC45MzA3MDY4MDMgQzI5LjE3OTM2MzgsMC42MzcwOTU4MTkgMjkuMDcyNzAyOSwwLjI2NjIxODc4NiAyOC43ODMxOTQ4LDAuMDk2MjMzNDc5OCBDMjguNDkzNjg2NywtMC4wNzM3NTEyMDg2IDI4LjEyNzk5MjMsMC4wMzQ0MjA2NDEgMjcuOTYwMzgyNCwwLjMyODAzMTYyNSBMMjUuMDA0MzUyNSw1LjUwNDg1ODQxIEMyMi43NDkyMzY5LDQuNDU0MDQwMTUgMjAuMjE5ODUwNCwzLjg2NjgxODE5IDE3LjUyMjg1NDEsMy44NjY4MTgxOSBDMTQuODI1ODU3NywzLjg2NjgxODE5IDEyLjI4MTIzNCw0LjQ1NDA0MDE1IDEwLjAyNjExODQsNS40ODk0MDUyIEw3LjA3MDA4ODUxLDAuMzEyNTc4NDE1IEM2LjkwMjQ3ODU2LDAuMDE4OTY3NDMxNCA2LjUzNjc4NDE0LC0wLjA4OTIwNDU3MjggNi4yNDcyNzYwNiwwLjA4MDc4MDI3MDEgQzUuOTU3NzY3OTcsMC4yNTA3NjU1NzcgNS44NTExMDcxLDAuNjIxNjQyNjA5IDYuMDE4NzE3MDQsMC45MTUyNTM1OTMgTDguOTI5MDM1MTUsNi4wMzAyNjc1NCBDMy45MzEyMTEzOCw4Ljc5NjM5MjA4IDAuNTAyODI5MjIxLDEzLjkyNjg1NzcgMCwyMCBMMzUsMjAgQzM0LjUxMjQwNzQsMTMuOTQyMzEwOSAzMS4wOTkyNTk1LDguODExODQ1MjggMjYuMDg2MTk4NSw2LjA0NTcyMDc1IiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" alt="">
+                                </div>
+                                <div class="UIButtons-footer-small__main-text">Загрузите на</div>
+                                <div class="UIButtons-footer-small__header-text">Android</div>
+                            </div>
+                            <div class="UIButtons-footer-small">
+                                <div class="centred-img">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMjkiIHZpZXdCb3g9IjAgMCAyOSAyOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAuMDQ5MzE2NCAxNC4wNDc3QzAuMDQ5MzE2NCA3LjQ1NTI1IDAuMDQ5MzE2NCA0LjE1OTAyIDIuMDk3MzMgMi4xMTFDNC4xNDUzNSAwLjA2Mjk4ODMgNy40NDE1OCAwLjA2Mjk4ODMgMTQuMDM0IDAuMDYyOTg4M0gxNS4wMDEyQzIxLjU5MzcgMC4wNjI5ODgzIDI0Ljg4OTkgMC4wNjI5ODgzIDI2LjkzNzkgMi4xMTFDMjguOTg1OSA0LjE1OTAyIDI4Ljk4NTkgNy40NTUyNSAyOC45ODU5IDE0LjA0NzdWMTQuOTg1MkMyOC45ODU5IDIxLjU3NzcgMjguOTg1OSAyNC44NzM5IDI2LjkzNzkgMjYuOTIxOUMyNC44ODk5IDI4Ljk2OTkgMjEuNTkzNyAyOC45Njk5IDE1LjAwMTIgMjguOTY5OUgxNC4wMzQxQzcuNDQxNTggMjguOTY5OSA0LjE0NTM1IDI4Ljk2OTkgMi4wOTczMyAyNi45MjE5QzAuMDQ5MzE2NCAyNC44NzM5IDAuMDQ5MzE2NCAyMS41Nzc3IDAuMDQ5MzE2NCAxNC45ODUyVjE0LjA0NzdaIiBmaWxsPSIjMkI3MUY1Ii8+CjxwYXRoIGQ9Ik0xNS40MzY0IDYuOTM1MjVDMTUuNDM2NCA1Ljg0NzQ5IDE2LjM1MiA1LjAxMzI1IDE3LjU2NzggNS4zOTYzNEwyMi45MTUgNi45MzUyNUMyMy42MDY4IDcuMTM0MzYgMjQuMDg0OCA3Ljc4MDAzIDI0LjA4NDggOC41MTU0NVYxNy42ODk5QzI0LjA4NDggMTguOTY4IDIzLjEyOTQgMTkuNTc3MSAyMi4wNDYzIDE5LjI3MDFMMjAuNDQ2MSAxOC43Nzk4QzIwLjE4NzYgMTguNzAwNiAyMC4wMDc3IDE4LjQ2NjMgMTkuOTk3OSAxOC4xOTYyTDE5Ljc0MDcgMTEuMTQ2NUMxOS43NDA3IDEwLjQxMTEgMTkuMjY3MiA5LjU3MjUgMTguNTA5NCA5LjI1MDExTDE4LjI5IDkuMTYxMDNDMTguMTk0NyA5LjEyMjMzIDE4LjExNDMgOS4yNDEzMyAxOC4xODU3IDkuMzE1MzNMMTguNTA5NCA5LjY1MDU4QzE4LjczNyA5Ljk0MTY0IDE4Ljg1OTIgMTAuMjY1NSAxOC44NTkyIDEwLjYzODNWMTkuOTczNEMxOC44NTkyIDIxLjEzNDIgMTcuNzA5OCAyMS43NDk3IDE2LjY5OTIgMjEuNDU4OEwxNS4xNDM1IDIxLjAxMTFDMTQuODc5NCAyMC45MzUxIDE0LjY5NDIgMjAuNjk3NyAxNC42ODQ4IDIwLjQyM0wxNC40MzQgMTMuMTE3OUMxNC40MzQgMTIuMzgyNyAxMy45NDk4IDExLjg0NzkgMTMuMjkwOCAxMS40NTE4TDEzLjAyMDUgMTEuMzAxNEMxMi45MjQ4IDExLjI0ODEgMTIuODI5NiAxMS4zNzIxIDEyLjkwNTkgMTEuNDUwOEwxMy4yOTA4IDExLjg0NzlDMTMuNTE4MiAxMi4xMzg4IDEzLjU3MzIgMTIuNDQwOCAxMy41NzMyIDEyLjgxMzVWMjIuMTA4NUMxMy41NzMyIDIzLjM4NzUgMTIuMzc1MyAyMy45NDIgMTEuMzUyIDIzLjY0NzVMNi4wMDQ4IDIyLjEwODVDNS4zMTI5NiAyMS45MDk0IDQuODM0OTYgMjEuMjYzOCA0LjgzNDk2IDIwLjUyODRWMTEuMzUzOUM0LjgzNDk2IDEwLjAxNzkgNS44NTAxMyA5LjQ3OTE4IDYuODczNDMgOS43NzM2OEwxMC4xODIxIDEwLjYzODNWOS4xNjUyMUMxMC4xODIxIDcuNzU5MzMgMTEuMTk3MyA3LjI5MDUxIDEyLjIyMDYgNy41ODUwMUwxNS40MzY0IDguNDk1OTZWNi45MzUyNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="">
+                                </div>
+                                <div class="UIButtons-footer-small__main-text">Скачайте в</div>
+                                <div class="UIButtons-footer-small__header-text">RuStore</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+    font: 14px / 20px SBSansInterface, Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    color: #8b949e;
+    background-color: #fff;
+    margin: 0;
+}

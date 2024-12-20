@@ -1,0 +1,226 @@
+.UIButtons__Small{
+    z-index: 1;
+    height: 125px;
+    width: 125px;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: 2px solid rgb(56, 230, 146);
+    display: inline-block;
+    overflow: hidden;
+}
+.UIButtons__Small img{
+    border-radius: 0;
+    border: none;
+    transition: 0.3s;
+    display: block;
+}
+.UIButton__Small-text{
+    line-height: 1.3;
+    font-weight: 600;
+    font-size: 13px;
+    z-index: 2;
+    pointer-events: none;
+    position: fixed;
+    padding: 15px;
+    height: 95px;
+    width: 95px;
+    color: #fff;
+}
+.UIButtons__Small .UIButtons__Small:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+
+.Mass-of-UIButtons{
+    margin: 0 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+
+.UIButtons__Big{
+    margin: 15px 15px;
+    width: 340px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.UIButtons__Big img{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+
+.UIButtons-Big__text{
+    margin: 22px 22px;
+    font-size: 20px;
+    color: #262626;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.UIButtons-Big__text-small{
+    margin: 0 22px 22px 22px;
+    font-size: 16px;
+    color: #262626;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+
+.arrow-right{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin: 25px;
+
+}
+.arrow-right svg{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.UIButtons__Medium{
+    margin: 15px 15px;
+    width: 260px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    position: relative;
+}
+.image-UIButtons-Medium{
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    height: 140px;
+    width: 140px;
+}
+.image-UIButtons-Medium img{
+    height: inherit;
+    width: inherit;
+}
+
+.UIButtons-size-on-hover:hover{
+    transform: scale(1.025);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.UIButtons__Long{
+    margin: 15px 15px;
+    width: 375px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    position: relative;
+}
+
+
+
+
+.UIButtons__you-may-like-it{
+    width: 340px;
+    height: 150px;
+    padding: 24px 0 24px 24px;
+    margin: 15px 15px;
+    border-radius: 20px;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+.UIButtons__you-may-like-it:hover .UIButtons-you-may-like-it__main-text{
+    color: #0D8523;
+
+}
+
+.UIButtons-you-may-like-it__all-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.UIButtons-you-may-like-it__header-text{
+    padding-left: 24px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    background-image: url(https://www.sberbank.ru/static/images/prod_card/2023_07/1690377900000_242_categoryIcon.svg?_=1690377985639);
+    background-repeat: no-repeat;
+}
+.UIButtons-you-may-like-it__header-textd{
+    
+    background-size: cover;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+
+}
+.UIButtons-you-may-like-it__main-text{
+    padding-right: 150px;
+    font-size: 20px;
+    color: #262626;
+    font-weight: 600;
+    height: 84px;
+}
+.UIButtons-you-may-like-it__green-text{
+    
+    font-size: 16px;
+    color: #0d8523;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.UIButtons-you-may-like-it__green-text:after {
+    margin-left: 10px;
+    content: "›";
+}
+.UIButtons-you-may-like-it__all-text img{
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    margin-left: 190px;
+    margin-top: 30px;
+}
+
+
+.UIButtons-footer-small{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #101010;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.UIButtons-footer-small__main-text{
+    font-size: 10px;
+    width: 100%;
+}
+.UIButtons-footer-small__header-text{
+    font-size: 14px;
+    margin-top: 3px;
+    width: 100%;
+}
